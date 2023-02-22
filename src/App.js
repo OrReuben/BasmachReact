@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import FilteringComponent from "./components/Filtering";
+import Introduction from "./components/Introduction";
 import PaginationComponent from "./components/Pagination";
 import SortingComponent from "./components/Sorting";
 
@@ -21,8 +22,12 @@ function App() {
   // console.log(string1.localeCompare(string2));
   return (
     <div className="App">
+      <Introduction name = {'or'} age = {20} />
+      <hr />
       <PaginationComponent items={data} />
+      <hr />
       <FilteringComponent items={data} />
+      <hr />
       <SortingComponent items={data} />
     </div>
   );
